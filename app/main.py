@@ -1,13 +1,13 @@
 from typing import Union
-
 from fastapi import FastAPI
+from mangum import Mangum
 
 app = FastAPI()
-
+handler = Mangum(app)
 
 @app.get("/")
 def read_root():
-    return {"Hello": "Worldaaaaaa"}
+    return {"Hello": "world"}
 
 
 @app.get("/items/{item_id}")

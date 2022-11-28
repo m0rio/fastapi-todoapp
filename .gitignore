@@ -1,0 +1,4 @@
+python/
+app/__pycache__
+python_layer.zip
+*.env
